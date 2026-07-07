@@ -1,0 +1,12 @@
+[Unit]
+Description=Python Production Web Server
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/ubuntu
+ExecStart=/usr/bin/python3 -m http.server 80
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
